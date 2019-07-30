@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>System Time Checker</title>
+    <style>
+      body {
+        max-width: 650px;
+        font-size: 20px;
+        font-family: 'Nobile', Helvetica, Arial, sans-serif;
+        margin: 100px;
+      }
+      .bold {
+        font-size: 20px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      This website uses simple JavaScript to check your system time. Any website could do this and this can be used to fingerprint you by your clock offset and clock skew. This can also be used to figure out your location by determining which countries have similar time as you. <br>
+      <br>
+      Refresh the page to update the time. <br>
+      <br>
+      If you set your system time back, you can see that this picks it up too. This does not determine the time from the system timezone.
+    </p>
+
+    <noscript>
+      <p class="bold">
+        JavaScript is needed for this to work.
+      </p>
+    </noscript>
+
+    <br>
+
+    <p>Your local time and date is: </p>
+
+    <h1 class="bold">Something's not working. Is JavaScript enabled?</h1>
+
+    <p>In epoch time: </p>
+
+    <h2 class="bold">Something's not working. Is JavaScript enabled?</h2>
+
+    <script>
+      // Save the current date as a variable.
+      var current_date = new Date();
+
+      // Save the current epoch time as a variable.
+      var epoch_time = (new Date).getTime();
+
+      // Display variables.
+      document.querySelector('h1').textContent = current_date;
+      document.querySelector('h2').textContent = epoch_time;
+    </script>
+  </body>
+</html>
